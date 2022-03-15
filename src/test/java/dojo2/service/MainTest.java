@@ -11,7 +11,7 @@ public class MainTest {
     void internalModelTest() {
         String str1 = "XXIV";
         String str2 = "XLVII";
-        Pair<String, String> result = RunService.extracted(str1, str2);
+        Pair<String, String> result = RunService.toinnerModel(str1, str2);
         Pair<String, String> example = new Pair("XXIIII","XXXXVII");
         assertEquals(example, result);
     }
