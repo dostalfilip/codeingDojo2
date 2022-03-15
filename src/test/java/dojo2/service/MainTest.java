@@ -13,6 +13,6 @@ public class MainTest {
         String str2 = "XLVII";
         Pair<String, String> result = RunService.extracted(str1, str2);
         Pair<String, String> example = new Pair("XXIIII","XXXXVII");
-        assertEquals(result, example);
+        assertEquals(example, result);
     }
 }
