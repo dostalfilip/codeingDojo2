@@ -1,1 +1,1 @@
-# codingDojo2
+# codingDojo-2
