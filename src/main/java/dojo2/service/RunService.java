@@ -1,6 +1,7 @@
 package dojo2.service;
 
 import kotlin.Pair;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.Scanner;
 
@@ -43,14 +44,40 @@ public class RunService {
         long countD = together.chars().filter(ch -> ch == 'D').count();
         long countM = together.chars().filter(ch -> ch == 'M').count();
 
+        //I
         long addToV = countI / 5;
         long realI = countI % 5;
 
+        //V
         countV += addToV;
         long addToX = countV / 2;
         long realV = countV % 2;
 
+        //X
+        countX += addToX;
+        long addToL = countX / 5;
+        long realX = countX % 5;
+
+        //L
+        countL += addToL;
+        long addToC = countL / 2;
+        long realL = countL % 2;
+
+        //C
+        countC += addToC;
+        long addToD = countC / 5;
+        long realC = countC % 5;
+
+        //D
+        countD += addToD;
+        long addToM = countD / 2;
+        long realD = countD % 2;
+
+        //M
+        countM += addToM;
 
 
+    String result =    ConvertorInternalModel.toExternalModel(StringUtils.repeat("M", (int) countM) + StringUtils.repeat("D", (int) countD) + StringUtils.repeat("C", (int) countC) + StringUtils.repeat("L", (int) countL) + StringUtils.repeat("X", (int) countX) + StringUtils.repeat("V", (int) countV) + StringUtils.repeat("I", (int) countI));
+        System.out.println(result);
     }
 }

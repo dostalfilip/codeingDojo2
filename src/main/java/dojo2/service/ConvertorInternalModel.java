@@ -13,5 +13,15 @@ public class ConvertorInternalModel {
         return number;
     }
 
+    public static String toExternalModel(String number){
+        number = number.replace("CM", "DCCCC").replace("CD", "CCCC");
+
+        number = number.replace("XC", "LXXXX").replace("XL", "XXXX");
+
+        number = number.replace("IX", "VIIII").replace("IV", "IIII");
+
+        return number;
+    }
+
 
 }
