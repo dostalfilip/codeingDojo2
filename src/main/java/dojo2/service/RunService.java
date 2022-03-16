@@ -77,7 +77,15 @@ public class RunService {
         countM += addToM;
 
 
-    String result =    ConvertorInternalModel.toExternalModel(StringUtils.repeat("M", (int) countM) + StringUtils.repeat("D", (int) countD) + StringUtils.repeat("C", (int) countC) + StringUtils.repeat("L", (int) countL) + StringUtils.repeat("X", (int) countX) + StringUtils.repeat("V", (int) countV) + StringUtils.repeat("I", (int) countI));
-        System.out.println(result);
+        String result = ConvertorInternalModel.toExternalModel(StringUtils.repeat("M", (int) countM)
+                + StringUtils.repeat("D", (int) realD) +
+                StringUtils.repeat("C", (int) realC) +
+                StringUtils.repeat("L", (int) realL) +
+                StringUtils.repeat("X", (int) realX) +
+                StringUtils.repeat("V", (int) realV) +
+                StringUtils.repeat("I", (int) realI));
+
+        System.out.println(ConvertorInternalModel.toExternalModel(result));
+
     }
 }

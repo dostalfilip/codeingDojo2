@@ -14,5 +14,6 @@ public class MainTest {
         Pair<String, String> result = RunService.toinnerModel(str1, str2);
         Pair<String, String> example = new Pair("XXIIII","XXXXVII");
         assertEquals(example, result);
+
     }
 }
